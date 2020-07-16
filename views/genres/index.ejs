@@ -1,0 +1,20 @@
+<h2>Genre List</h2>
+<table border="1">
+  <thead>
+    <tr>
+      <td>Genre</td>
+      <td>Action</td>
+    </tr>
+  </thead>
+
+  <% genres.forEach((genre) => { %>
+    <tr>
+      <td><%= genre.genre%></td>
+      <td>
+        <a href="/genres/show/<%= genre._id%>">View</a>
+        <a href="/genres/edit/<%= genre._id%>">Edit</a>
+        <a href="/genres/delete/<%= genre._id%>">Delete</a>
+      </td>
+    </tr>
+  <% }) %> 
+</table>  

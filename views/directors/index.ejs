@@ -1,0 +1,20 @@
+<h2>Director List</h2>
+<table border="1">
+  <thead>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Action</td>
+  </thead>
+
+  <% directors.forEach((director) => { %>
+    <tr>
+      <td><%= director.firstname%></td>
+      <td><%= director.lastname%></td>
+      <td>
+        <a href="/directors/show/<%= director._id%>">View</a>
+        <a href="/directors/edit/<%= director._id%>">Edit</a>
+        <a href="/directors/delete/<%= director._id%>">Delete</a>
+      </td>
+    </tr>
+  <% }) %> 
+</table>  

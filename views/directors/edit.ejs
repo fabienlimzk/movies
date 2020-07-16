@@ -1,0 +1,10 @@
+<form action="/directors/edit/<%= director._id %>" method="POST">
+  <h3>Edit Director</h3>
+  <div>
+    <input type="text" name="firstname" value="<%= director.firstname %>" />
+  </div>
+  <div>
+    <input type="text" name="lastname" value="<%= director.lastname %>" />
+  </div>
+  <button type="submit">Submit</button>
+</form>

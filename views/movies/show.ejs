@@ -1,0 +1,19 @@
+<div>
+  <h2>Show Movie</h2>
+  <img src="<%= movie.image_path %>" alt="image">
+  <div>Movie Title: <%= movie.title %></div>
+  <div>Description: <%= movie.description %></div>
+  <div>Featured: <%= movie.featured %></div>
+  <div>Genres: 
+    <% movie.genreTypes.forEach((genre) => { %>
+      <%= genre.genre %>
+    <% }) %> 
+  </div>
+  <div>Directors: <%= movie.directedBy.firstname %> <%= movie.directedBy.lastname %></div>rs
+  
+  <div>Actors: 
+    <% movie.actedBy.forEach((actor) => { %>
+      <%= actor.firstname %> <%= actor.lastname %>
+    <% }) %> 
+  </div>
+</div>

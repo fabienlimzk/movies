@@ -1,0 +1,17 @@
+<form action="/edit/<%= movie._id %> " method="POST">
+  <label for="">Title: </label>
+  <input type="text" name="title" value="<%= movie.title %>" />
+
+  <label for="">Description: </label>
+  <input type="text" name="description" value="<%= movie.description %>" />
+  
+  <label for="">Image Path: </label>
+  <input type="text" name="image_path" value="<%= movie.image_path %>" />
+  
+  <label for="">Featured: </label>
+  <input type="radio" name="featured" value="true" <%= movie.featured == true ? "checked" : "" %>>
+  <label for="true">True</label><br>
+  <input type="radio" name="featured" value="false"<%= movie.featured == false ? "checked" : "" %>>
+  <label for="false">False</label><br>  
+  <button type="submit">Edit Movie</button>
+</form>

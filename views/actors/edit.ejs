@@ -1,0 +1,10 @@
+<form action="/actors/edit/<%= actor._id %>" method="POST">
+  <h3>Edit Actor</h3>
+  <div>
+    <input type="text" name="firstname" value="<%= actor.firstname %>" />
+  </div>
+  <div>
+    <input type="text" name="lastname" value="<%= actor.lastname %>" />
+  </div>
+  <button type="submit">Submit</button>
+</form>

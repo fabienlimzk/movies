@@ -1,0 +1,20 @@
+<h2>Actor List</h2>
+<table border="1">
+  <thead>
+    <td>First Name</td>
+    <td>Last Name</td>
+    <td>Action</td>
+  </thead>
+
+  <% actors.forEach((actor) => { %>
+    <tr>
+      <td><%= actor.firstname%></td>
+      <td><%= actor.lastname%></td>
+      <td>
+        <a href="/actors/show/<%= actor._id%>">View</a>
+        <a href="/actors/edit/<%= actor._id%>">Edit</a>
+        <a href="/actors/delete/<%= actor._id%>">Delete</a>
+      </td>
+    </tr>
+  <% }) %> 
+</table>  

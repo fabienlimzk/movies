@@ -1,0 +1,35 @@
+<form action="/create" method="post">
+  <label for="">Title: </label>
+  <input type="text" name="title" />
+  <label for="">Description: </label>
+  <input type="text" name="description" />
+  <label for="">Image Path: </label>
+  <input type="text" name="image_path" />
+  <label for="">Featured: </label>
+  <input type="radio" name="featured" value="true">
+  <label for="true">True</label>
+  <input type="radio" name="featured" value="false">
+  <label for="false">False</label><br>
+
+  <label for="">Genres: </label>
+  <% genres.forEach((genre) => { %> 
+    <input type="checkbox" name="genreTypes" value="<%= genre._id %>" /> <%= genre.genre %>
+  <% }) %>
+  <br>
+  <label for="">Director: </label>
+  <select name="directedBy">
+    <option value="">Select One</option>
+    <% directors.forEach(director => { %>
+    <option value="<%= director._id %>">
+      <%= director.firstname %> <%= director.lastname %>
+      </option>
+    <% }) %>
+  </select>
+  <br>
+  <label for="">Actors: </label>
+  <% actors.forEach((actor) => { %> 
+    <input type="checkbox" name="actedBy" value="<%= actor._id %>" /> <%= actor.firstname %> <%= actor.lastname %>
+  <% }) %>
+  <br>
+  <button type="submit">Add Movie</button>
+</form>
